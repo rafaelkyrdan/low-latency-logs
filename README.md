@@ -1,5 +1,5 @@
 # low-latency-logs
-Logging for real time data low latency system
+Logging for low latency system
 
 
 

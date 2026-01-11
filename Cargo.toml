@@ -1,0 +1,21 @@
+[package]
+name = "low-latency-logs"
+version = "1.1.0"
+edition = "2024"
+
+[dependencies]
+crossbeam-channel = "0.5"
+core_affinity = { version = "0.8", optional = true }
+
+[dev-dependencies]
+criterion = { version = "0.5", features = ["html_reports"] }
+log = "0.4"
+env_logger = "0.10"
+serde = { version = "1.0", features = ["derive"] }
+bincode = "1.3"
+tokio = { version = "1.0", features = ["full"] }
+rand = "0.8"
+
+[features]
+default = ["cpu-affinity"]
+cpu-affinity = ["dep:core_affinity"]
